@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Rxjs 笔记 | Tmirun blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Rxjs笔记">
+<meta name="keywords" content="untaged">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Rxjs 笔记">
+<meta property="og:url" content="https://tmirun.github.io/Rxjs-笔记/index.html">
+<meta property="og:site_name" content="Tmirun blog">
+<meta property="og:description" content="Rxjs笔记">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://cdn-images-1.medium.com/max/800/1*FjTqms95LbK_ztsZXiNpoQ.png">
+<meta property="og:image" content="https://cdn-images-1.medium.com/max/800/1*DvH5Iqul7Nxor7r7AencgA.png">
+<meta property="og:updated_time" content="2018-10-17T21:51:27.816Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Rxjs 笔记">
+<meta name="twitter:description" content="Rxjs笔记">
+<meta name="twitter:image" content="https://cdn-images-1.medium.com/max/800/1*FjTqms95LbK_ztsZXiNpoQ.png">
+  
+    <link rel="alternate" href="/blog/atom.xml" title="Tmirun blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/blog/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/blog/" id="logo">Tmirun blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/blog/">Home</a>
+        
+          <a class="main-nav-link" href="/blog/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://tmirun.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Rxjs-笔记" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/Rxjs-笔记/" class="article-date">
+  <time datetime="2017-03-08T12:30:00.000Z" itemprop="datePublished">2017-03-08</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/uncategorized/">uncategorized</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Rxjs 笔记
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Rxjs笔记</p>
+<a id="more"></a>
+<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>用 npm</p>
+<p><code>npm install rxjs-es</code></p>
+<p>或者用 unpkg 来直接添加到网页里面:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=&quot;https://unpkg.com/rxjs/bundles/Rx.min.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>更多其他方法 <a href="http://reactivex.io/rxjs/manual/installation.html#commonjs-via-npm" target="_blank" rel="noopener">Rxjs install</a></p>
+<h1 id="教程参考网页"><a href="#教程参考网页" class="headerlink" title="教程参考网页"></a>教程参考网页</h1><p><a href="https://fe.ele.me/let-us-learn-rxjs/" target="_blank" rel="noopener">https://fe.ele.me/let-us-learn-rxjs/</a>;</p>
+<p><a href="https://buctwbzs.gitbooks.io/rxjs/content/observable.html" target="_blank" rel="noopener">官方文档翻译</a></p>
+<hr>
+<h1 id="概要"><a href="#概要" class="headerlink" title="概要"></a>概要</h1><ul>
+<li>Observable: (是什么)</li>
+<li>Observer: (是什么)</li>
+<li>Subscription: (是什么)</li>
+<li>Operators:(是什么)</li>
+<li>Subject: (是什么)</li>
+<li>Schedulers: (是什么)</li>
+</ul>
+<h2 id="两分钟快速理解-Reactive"><a href="#两分钟快速理解-Reactive" class="headerlink" title="两分钟快速理解 Reactive"></a>两分钟快速理解 Reactive</h2><p><a href="https://medium.com/@andrestaltz/2-minute-introduction-to-rx-24c8ca793877#.ln7qyzrjb" target="_blank" rel="noopener">原文</a></p>
+<p>当你有个数组:</p>
+<p><code>[ 14, 9, 5, 2, 10, 13, 4 ]</code></p>
+<p>你只要偶数的时候你可能会这么做:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[ 14, 9, 5, 2, 10, 13, 4 ]</span><br><span class="line"></span><br><span class="line">filter( (x) -&gt; x % 2 == 0 )</span><br><span class="line"></span><br><span class="line">[ 14, 2, 10, 4 ]</span><br></pre></td></tr></table></figure>
+<p>Observable 是一个异步的数组: <code>Obserbale = 数组 + 时间轴</code></p>
+<p>下面是一个鼠标点击例子:</p>
+<p>鼠标点击产生的 stream;</p>
+<p><img src="https://cdn-images-1.medium.com/max/800/1*FjTqms95LbK_ztsZXiNpoQ.png" alt=""></p>
+<p>我们只要其中的</p>
+<p><code>filter( (event) -&gt; event.x &lt; 250 )</code></p>
+<p><img src="https://cdn-images-1.medium.com/max/800/1*DvH5Iqul7Nxor7r7AencgA.png" alt=""></p>
+<p>看到这里你会说这不就是个 stream 嘛, 好吧, 完全可以这么认为. 在下面的介绍中 observable 和 stream 是同一个词.</p>
+<blockquote>
+<p>面对 RxJS 那么多 operator ，我们要怎么学习呢？很简单：</p>
+</blockquote>
+<blockquote>
+<p><a href="http://reactivex.io/rxjs/manual/overview.html#categories-of-operators" target="_blank" rel="noopener">分类别</a></p>
+<ul>
+<li><a href="http://reactivex.io/rxjs/manual/overview.html#marble-diagrams" target="_blank" rel="noopener">画 marble 图</a></li>
+<li><a href="https://www.learnrxjs.io/operators/" target="_blank" rel="noopener">看例子</a> </li>
+<li><a href="http://reactivex.io/rxjs/manual/overview.html#choose-an-operator" target="_blank" rel="noopener">选</a></li>
+</ul>
+</blockquote>
+<h2 id="Marble-图"><a href="#Marble-图" class="headerlink" title="Marble 图"></a>Marble 图</h2><p><a href="http://reactivex.io/rxjs/manual/overview.html#marble-diagrams" target="_blank" rel="noopener">Marble diagram</a></p>
+<p>我们再用图来表示一下的话：</p>
+<p><code>--a---b-c--d-----e--|--&gt;</code></p>
+<p>这种图叫做 marble diagram 。<br>我们可以把 ASCII 的 marble 图转成 SVG 的：ASCII -&gt; SVG 。</p>
+<p>- 表示时间轴，a ~ e 表示 emit 的值，| 则表示这个 stream 已经结束了。<br>比方说，click 事件用上图来表示：a 表示第 1 次点击，b 表示第 2 次点击，如此类推。</p>
+<hr>
+<h1 id="Observable"><a href="#Observable" class="headerlink" title="Observable"></a>Observable</h1><p><a href="https://jsfiddle.net/guangjungg/hofe6pqy/" target="_blank" rel="noopener">Demo</a></p>
+<p>一个简单的例子</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">// 创建一个stream</span></span><br><span class="line"><span class="comment">// 1-2-3-----------4--|--&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> observable = Rx.Observable.create(<span class="function"><span class="keyword">function</span> (<span class="params">observer</span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="comment">//可以给订阅返回多个值</span></span><br><span class="line">  observer.next(<span class="number">1</span>);</span><br><span class="line">  observer.next(<span class="number">2</span>);</span><br><span class="line">  observer.next(<span class="number">3</span>);</span><br><span class="line">  </span><br><span class="line">  <span class="comment">//也可以异步返回</span></span><br><span class="line">  setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    observer.next(<span class="number">4</span>);</span><br><span class="line">    observer.complete();</span><br><span class="line">    <span class="comment">// 一旦结束后再使用 complete 或者 next 不会有反应</span></span><br><span class="line">    observer.complete();</span><br><span class="line">    observer.next(<span class="number">5</span>);</span><br><span class="line">  &#125;, <span class="number">1000</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'just before subscribe'</span>);</span><br><span class="line"><span class="comment">//订阅</span></span><br><span class="line">observable.subscribe(&#123;</span><br><span class="line">  next: <span class="function"><span class="params">x</span> =&gt;</span> <span class="built_in">console</span>.log(<span class="string">'got value '</span> + x),</span><br><span class="line">  error: <span class="function"><span class="params">err</span> =&gt;</span> <span class="built_in">console</span>.error(<span class="string">'something wrong occurred: '</span> + err),</span><br><span class="line">  complete: <span class="function"><span class="params">()</span> =&gt;</span> <span class="built_in">console</span>.log(<span class="string">'done'</span>),</span><br><span class="line">&#125;);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'just after subscribe'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 取消订阅 </span></span><br><span class="line"><span class="comment">//subscription.unsubscribe();</span></span><br></pre></td></tr></table></figure>
+<h1 id="订阅和取消订阅"><a href="#订阅和取消订阅" class="headerlink" title="订阅和取消订阅"></a>订阅和取消订阅</h1><p><a href="https://jsfiddle.net/" target="_blank" rel="noopener">Demo</a></p>
+<p>订阅可以理解成可观察对象的执行.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">//创建两个可观察对象</span></span><br><span class="line"><span class="keyword">var</span> observable1 = Rx.Observable.interval(<span class="number">400</span>);</span><br><span class="line"><span class="keyword">var</span> observable2 = Rx.Observable.interval(<span class="number">300</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//两个订阅</span></span><br><span class="line"><span class="keyword">var</span> subscription = observable1.subscribe(<span class="function"><span class="params">x</span> =&gt;</span> <span class="built_in">console</span>.log(<span class="string">'first:'</span> + x));</span><br><span class="line"><span class="keyword">var</span> childSubscription = observable2.subscribe(<span class="function"><span class="params">x</span> =&gt;</span> <span class="built_in">console</span>.log(<span class="string">"second:"</span> +x));</span><br><span class="line"></span><br><span class="line"><span class="comment">//订阅对象也可以被放置在一起</span></span><br><span class="line">subscription.add(childSubscription);</span><br><span class="line"></span><br><span class="line">setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">	<span class="built_in">console</span>.log(<span class="string">"unsubscribe"</span>)</span><br><span class="line">	<span class="comment">// 取消两个订阅 subscription and childSubscription</span></span><br><span class="line">	subscription.unsubscribe();</span><br><span class="line">&#125;, <span class="number">1000</span>);</span><br></pre></td></tr></table></figure>
+<h1 id="Observer"><a href="#Observer" class="headerlink" title="Observer"></a>Observer</h1><p>什么是观察者？观察者是可观察对象所发送数据的消费者，观察者简单而言是一组回调函数 ， 分别对应一种被可观察对象发送的通知的类型:next, error和complete</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var observer=&#123;</span><br><span class="line">  next:x=&gt;console.log(&apos;Observer got a next value: &apos; + x),</span><br><span class="line">  error: err =&gt; console.error(&apos;Observer got an error: &apos; + err),</span><br><span class="line">  complete: () =&gt; console.log(&apos;Observer got a complete notification&apos;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">observable.subscribe(observer)</span><br></pre></td></tr></table></figure>
+<h1 id="Subject"><a href="#Subject" class="headerlink" title="Subject"></a>Subject</h1><p>Subject就是一个可观察对象，只不过可以被多播至多个观察者。同时Subject也类似于EventEmitter:维护者着众多事件监听器的注册表。</p>
+<h2 id="一个简单的例子"><a href="#一个简单的例子" class="headerlink" title="一个简单的例子"></a>一个简单的例子</h2><p>把它当做 eventEmitter 来用</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">// new event emmiter</span></span><br><span class="line"><span class="keyword">var</span> subject = <span class="keyword">new</span> Rx.Subject(); </span><br><span class="line"></span><br><span class="line"><span class="comment">// event.bind()</span></span><br><span class="line">subject.subscribe(&#123;</span><br><span class="line">  next: <span class="function">(<span class="params">v</span>) =&gt;</span> <span class="built_in">console</span>.log(<span class="string">'observerA: '</span> + v)</span><br><span class="line">&#125;);</span><br><span class="line">subject.subscribe(&#123;</span><br><span class="line">  next: <span class="function">(<span class="params">v</span>) =&gt;</span> <span class="built_in">console</span>.log(<span class="string">'observerB: '</span> + v)</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// event.trigger()</span></span><br><span class="line">subject.next(<span class="number">1</span>);</span><br><span class="line">subject.next(<span class="number">2</span>);</span><br></pre></td></tr></table></figure>
+<h2 id="结合-subject-和-observable"><a href="#结合-subject-和-observable" class="headerlink" title="结合 subject 和 observable"></a>结合 subject 和 observable</h2><p>我们有一个 observable (或stream) 但它只能在我们订阅的时候才能执行, 每次执行都是单个执行的, 如果我们要把订阅值推送到不同的地方怎么办.</p>
+
+<p>在这里我们就可以用到 subject.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">// 创建 eventEmmiter</span><br><span class="line">var subject = new Rx.Subject();</span><br><span class="line"></span><br><span class="line">// 绑定事件 event.bind()</span><br><span class="line">subject.subscribe(&#123;</span><br><span class="line">  next: (v) =&gt; console.log(&apos;observerA: &apos; + v)</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">// 绑定事件 event.bind()</span><br><span class="line">subject.subscribe(&#123;</span><br><span class="line">  next: (v) =&gt; console.log(&apos;observerB: &apos; + v)</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">var observable = Rx.Observable.from([1, 2, 3]);</span><br><span class="line"></span><br><span class="line">// 触发订阅事件 event.trigger();</span><br><span class="line">observable.subscribe(subject);</span><br></pre></td></tr></table></figure>
+<h2 id="多播的可观察对象-multicast"><a href="#多播的可观察对象-multicast" class="headerlink" title="多播的可观察对象 (multicast)"></a>多播的可观察对象 (multicast)</h2><p>一个多播的可观察对象使用一个Subject，使得多个观察者可以看到同一个可观察对象的执行 (和上面的结果一样, 就是方法有区别)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var source=Rx.Observable.from([1,2,3]);</span><br><span class="line">var subject=new Rx.Subject();</span><br><span class="line">var multicasted=source.multicast(subject);</span><br><span class="line">multicasted.subscribe(&#123;</span><br><span class="line">  next:(v)=&gt;console.log(&apos;observerA:&apos; +v);</span><br><span class="line">&#125;);</span><br><span class="line">multicasted.subscribe(&#123;</span><br><span class="line">  next: (v) =&gt; console.log(&apos;observerB: &apos; + v)</span><br><span class="line">&#125;);</span><br><span class="line">multicasted.connect();</span><br></pre></td></tr></table></figure>
+<p>multicast方法返回一个看起来很像普通的可观察对象的可观察对象，但是在订阅时却有着和Subject一样的行为，multicast返回一个ConnectableObservable，它只是一个具有connect（）方法的Observable。</p>
+<p>connect()方法对于在决定何时开始分享可观察对象的执行是非常重要的。 因为connect（）在source下面有source.subscribe（subject），connect（）返回一个Subscription，你可以取消订阅，以取消共享的Observable执行。</p>
+<h2 id="BehaviorSubject"><a href="#BehaviorSubject" class="headerlink" title="BehaviorSubject"></a>BehaviorSubject</h2><p><a href="https://jsfiddle.net/guangjungg/4fzscfry/" target="_blank" rel="noopener">Demo</a></p>
+<p>BehaviorSubject 和 subject 一样, 区别在于:</p>
+<ul>
+<li>可以初始值.</li>
+<li>保存当前的值.</li>
+<li>在中途可以获取值 用 getValue();</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">// 初始值 &quot;a&quot;</span><br><span class="line">let bSubject = new Rx.BehaviorSubject(&quot;a&quot;); </span><br><span class="line"></span><br><span class="line">// 保存新的值</span><br><span class="line">bSubject.next(&quot;b&quot;);</span><br><span class="line"></span><br><span class="line">bSubject.subscribe((value) =&gt; &#123;</span><br><span class="line">  console.log(&quot;BehaviorSubject Subscription got&quot;, value); </span><br><span class="line">  // 订阅并获取值 &quot;b&quot;</span><br><span class="line">  // 这个是在其他 Observable 或者 Subject 里面没有的</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">bSubject.next(&quot;c&quot;); // 获取值 c</span><br><span class="line">bSubject.next(&quot;d&quot;); // 获取值 d</span><br></pre></td></tr></table></figure>
+<p>对比普通的 Subject: </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">// Regular Subject</span><br><span class="line"></span><br><span class="line">let subject = new Rx.Subject(); </span><br><span class="line"></span><br><span class="line">subject.next(&quot;b&quot;);</span><br><span class="line">subject.subscribe((value) =&gt; &#123;</span><br><span class="line">  console.log(&quot;Subject Subscription got&quot;, value); //在这里没有获取任何值</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">subject.next(&quot;c&quot;); // 获取值 c</span><br><span class="line">subject.next(&quot;d&quot;); // 获取值 d</span><br></pre></td></tr></table></figure>
+<h1 id="ReplaySubject"><a href="#ReplaySubject" class="headerlink" title="ReplaySubject"></a>ReplaySubject</h1><p>一个ReplaySubject类似于一个BehaviorSubject，因为它可以发送一个过去的值(old values)给一个新的订阅者，但是它也可以记录可观察对象的一部分执行。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> subject = <span class="keyword">new</span> Rx.ReplaySubject(<span class="number">3</span>); </span><br><span class="line"><span class="comment">// buffer 3 values for new subscribers ，注:缓存了三个值。</span></span><br><span class="line"></span><br><span class="line">subject.subscribe(&#123;</span><br><span class="line">  next: <span class="function">(<span class="params">v</span>) =&gt;</span> <span class="built_in">console</span>.log(<span class="string">'observerA: '</span> + v)</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">subject.next(<span class="number">1</span>);</span><br><span class="line">subject.next(<span class="number">2</span>);</span><br><span class="line">subject.next(<span class="number">3</span>);</span><br><span class="line">subject.next(<span class="number">4</span>);</span><br><span class="line"></span><br><span class="line">subject.subscribe(&#123;</span><br><span class="line">  next: <span class="function">(<span class="params">v</span>) =&gt;</span> <span class="built_in">console</span>.log(<span class="string">'observerB: '</span> + v)</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">subject.next(<span class="number">5</span>);</span><br></pre></td></tr></table></figure>
+<p>输出:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">observerA: 1</span><br><span class="line">observerA: 2</span><br><span class="line">observerA: 3</span><br><span class="line">observerA: 4</span><br><span class="line">observerB: 2</span><br><span class="line">observerB: 3</span><br><span class="line">observerB: 4</span><br><span class="line">observerA: 5</span><br><span class="line">observerB: 5</span><br></pre></td></tr></table></figure></p>
+<h1 id="AsyncSubject"><a href="#AsyncSubject" class="headerlink" title="AsyncSubject"></a>AsyncSubject</h1><p>AsyncSubject是另一个变体，它只发送给观察者可观察对象执行的最新值，并且仅在执行结束时。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">var subject = new Rx.AsyncSubject();</span><br><span class="line"></span><br><span class="line">subject.subscribe(&#123;</span><br><span class="line">  next: (v) =&gt; console.log(&apos;observerA: &apos; + v)</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">subject.next(1);</span><br><span class="line">subject.next(2);</span><br><span class="line">subject.next(3);</span><br><span class="line">subject.next(4);</span><br><span class="line"></span><br><span class="line">subject.subscribe(&#123;</span><br><span class="line">  next: (v) =&gt; console.log(&apos;observerB: &apos; + v)</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">subject.next(5);</span><br><span class="line">subject.complete(); // 只有在结束时候订阅才获取值</span><br></pre></td></tr></table></figure>
+<p>输出:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">observerA: 5</span><br><span class="line">observerB: 5</span><br></pre></td></tr></table></figure>
+<h1 id="asObservable"><a href="#asObservable" class="headerlink" title="asObservable()"></a>asObservable()</h1><p><a href="https://jsfiddle.net/guangjungg/pc9gu1yL/" target="_blank" rel="noopener">Demo</a>;</p>
+<p>隐藏 序列 方法 比如: next(), complete()…</p>
+<blockquote>
+<p>hiden the indentity of a observable sequence.</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">var data = [1,2,3,4,5,6,7,8];</span><br><span class="line"></span><br><span class="line">var myApi = &#123;</span><br><span class="line">	getData()&#123;</span><br><span class="line">  	var subject = new Rx.BehaviorSubject();</span><br><span class="line">    subject.next(&#123;data&#125;);</span><br><span class="line">    return subject.asObservable();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var result = myApi.getData();</span><br><span class="line">result.subscribe(&#123;</span><br><span class="line">	next: (data)=&gt;&#123;console.log(data)&#125;</span><br><span class="line">&#125;)</span><br><span class="line">result.next(&quot;new date&quot;); //错误</span><br></pre></td></tr></table></figure>
+<h1 id="Subscription-对象"><a href="#Subscription-对象" class="headerlink" title="Subscription 对象"></a>Subscription 对象</h1><p>创建 subscribe 看起来很简单, 但是我们需要在软件中添加 unsubscribe 来取消订阅以防这些代码继续在跑. 一旦多了就不好控制.</p>
+<p>打个比方 我们创建了一个 组件(web custom element), 在这个组件里面加载了很多 rxjs的订阅, 当这个组件被删除时候我们需要吧 全部的订阅给取消了. 一个个取消比较麻烦所以我们需要这个 subscription 对象来创建一个 订阅数组.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">var group = new suscription();</span><br><span class="line"></span><br><span class="line">subject.next(&quot;b&quot;);</span><br><span class="line">var a = subject.subscribe((value) =&gt; &#123;</span><br><span class="line">  console.log(&quot;Subject A Subscription got&quot;, value); //在这里没有获取任何值</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">group.add(a);</span><br><span class="line"></span><br><span class="line">var b = subject.subscribe((value) =&gt; &#123;</span><br><span class="line">  console.log(&quot;Subject B Subscription got&quot;, value); //在这里没有获取任何值</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">group.add(b);</span><br><span class="line"></span><br><span class="line">group.unsubscibe(); //取消全部订阅</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://tmirun.github.io/Rxjs-笔记/" data-id="cjnzbd2u8002gh81ee0k9wbss" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/untaged/">untaged</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/blog/项目结构/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          项目结构
+        
+      </div>
+    </a>
+  
+  
+    <a href="/blog/PostgreSQL-笔记/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">PostgreSQL 笔记</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Electron/">Electron</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Hexo/">Hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Javascript/">Javascript</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/MongoDb/">MongoDb</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Node/">Node</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Testing/">Testing</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Typescript/">Typescript</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/programing/">programing</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/release/">release</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/uncategorized/">uncategorized</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/web/">web</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/电脑/">电脑</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Angular/">Angular</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Blog/">Blog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Color-picker/">Color picker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Electron/">Electron</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Electron-菜单/">Electron 菜单</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Electron-默认菜单/">Electron 默认菜单</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/EventListener/">EventListener</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Javascript/">Javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Mac/">Mac</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Mongodb/">Mongodb</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Node/">Node</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Nodejs/">Nodejs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/OS/">OS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Phantomjs/">Phantomjs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Promise/">Promise</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Testing/">Testing</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/gulp/">gulp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/node/">node</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/programing/">programing</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/release-notes/">release notes</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/scrum/">scrum</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/typescript/">typescript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/untaged/">untaged</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/web/">web</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/框架-web/">框架 web</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/版本发布通知/">版本发布通知</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/blog/tags/Angular/" style="font-size: 10px;">Angular</a> <a href="/blog/tags/Blog/" style="font-size: 10px;">Blog</a> <a href="/blog/tags/Color-picker/" style="font-size: 10px;">Color picker</a> <a href="/blog/tags/Electron/" style="font-size: 13.33px;">Electron</a> <a href="/blog/tags/Electron-菜单/" style="font-size: 10px;">Electron 菜单</a> <a href="/blog/tags/Electron-默认菜单/" style="font-size: 10px;">Electron 默认菜单</a> <a href="/blog/tags/EventListener/" style="font-size: 10px;">EventListener</a> <a href="/blog/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/blog/tags/Javascript/" style="font-size: 16.67px;">Javascript</a> <a href="/blog/tags/Mac/" style="font-size: 10px;">Mac</a> <a href="/blog/tags/Mongodb/" style="font-size: 10px;">Mongodb</a> <a href="/blog/tags/Node/" style="font-size: 13.33px;">Node</a> <a href="/blog/tags/Nodejs/" style="font-size: 10px;">Nodejs</a> <a href="/blog/tags/OS/" style="font-size: 10px;">OS</a> <a href="/blog/tags/Phantomjs/" style="font-size: 10px;">Phantomjs</a> <a href="/blog/tags/Promise/" style="font-size: 10px;">Promise</a> <a href="/blog/tags/Testing/" style="font-size: 10px;">Testing</a> <a href="/blog/tags/gulp/" style="font-size: 10px;">gulp</a> <a href="/blog/tags/node/" style="font-size: 10px;">node</a> <a href="/blog/tags/programing/" style="font-size: 10px;">programing</a> <a href="/blog/tags/release-notes/" style="font-size: 10px;">release notes</a> <a href="/blog/tags/scrum/" style="font-size: 10px;">scrum</a> <a href="/blog/tags/typescript/" style="font-size: 10px;">typescript</a> <a href="/blog/tags/untaged/" style="font-size: 20px;">untaged</a> <a href="/blog/tags/web/" style="font-size: 10px;">web</a> <a href="/blog/tags/框架-web/" style="font-size: 10px;">框架 web</a> <a href="/blog/tags/版本发布通知/" style="font-size: 10px;">版本发布通知</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/11/">November 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/10/">October 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/09/">September 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/10/">October 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/09/">September 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/11/">November 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/10/">October 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/09/">September 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/01/">January 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/blog/我是小白，我要学编程！/">我是小白，我要学编程！</a>
+          </li>
+        
+          <li>
+            <a href="/blog/Electron-默认菜单/">Electron 默认菜单</a>
+          </li>
+        
+          <li>
+            <a href="/blog/Release-Notes-版本发布通知/">Release Notes 版本发布通知</a>
+          </li>
+        
+          <li>
+            <a href="/blog/Hexo-Note-开发流程/">Hexo Note 开发流程</a>
+          </li>
+        
+          <li>
+            <a href="/blog/Electron-开始一个项目/">Electron 开始一个项目</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 Tmirun<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/blog/" class="mobile-nav-link">Home</a>
+  
+    <a href="/blog/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/blog/fancybox/jquery.fancybox.css">
+  <script src="/blog/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/blog/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>PostgreSQL 笔记 | Tmirun blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="下载安装 PostgreSQL用安装包下载下载; 安装后会出现以下几个软件:  sql shell (psql): 终端 pgAdmin 4: 数据库 GUI reload configuration: 重置设置 aplicacion stack builder: 下载其他的插件用的  Mac 用户用 brewbrew install 输入命令打开 sql shell;  ⚠️ SQL 语句一">
+<meta name="keywords" content="untaged">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PostgreSQL 笔记">
+<meta property="og:url" content="https://tmirun.github.io/PostgreSQL-笔记/index.html">
+<meta property="og:site_name" content="Tmirun blog">
+<meta property="og:description" content="下载安装 PostgreSQL用安装包下载下载; 安装后会出现以下几个软件:  sql shell (psql): 终端 pgAdmin 4: 数据库 GUI reload configuration: 重置设置 aplicacion stack builder: 下载其他的插件用的  Mac 用户用 brewbrew install 输入命令打开 sql shell;  ⚠️ SQL 语句一">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-10-17T21:51:27.815Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="PostgreSQL 笔记">
+<meta name="twitter:description" content="下载安装 PostgreSQL用安装包下载下载; 安装后会出现以下几个软件:  sql shell (psql): 终端 pgAdmin 4: 数据库 GUI reload configuration: 重置设置 aplicacion stack builder: 下载其他的插件用的  Mac 用户用 brewbrew install 输入命令打开 sql shell;  ⚠️ SQL 语句一">
+  
+    <link rel="alternate" href="/blog/atom.xml" title="Tmirun blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/blog/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/blog/" id="logo">Tmirun blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/blog/">Home</a>
+        
+          <a class="main-nav-link" href="/blog/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://tmirun.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-PostgreSQL-笔记" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/PostgreSQL-笔记/" class="article-date">
+  <time datetime="2017-02-23T20:22:26.000Z" itemprop="datePublished">2017-02-23</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/uncategorized/">uncategorized</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      PostgreSQL 笔记
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <a id="more"></a>
+<!-- more -->
+<h1 id="下载安装-PostgreSQL"><a href="#下载安装-PostgreSQL" class="headerlink" title="下载安装 PostgreSQL"></a>下载安装 PostgreSQL</h1><h2 id="用安装包下载"><a href="#用安装包下载" class="headerlink" title="用安装包下载"></a>用安装包下载</h2><p><a href="https://www.postgresql.org/download/" target="_blank" rel="noopener">下载</a>;</p>
+<p>安装后会出现以下几个软件:</p>
+<ul>
+<li>sql shell (psql): 终端</li>
+<li>pgAdmin 4: 数据库 GUI</li>
+<li>reload configuration: 重置设置</li>
+<li>aplicacion stack builder: 下载其他的插件用的</li>
+</ul>
+<h2 id="Mac-用户用-brew"><a href="#Mac-用户用-brew" class="headerlink" title="Mac 用户用 brew"></a>Mac 用户用 brew</h2><p><code>brew install</code></p>
+<h1 id="输入命令"><a href="#输入命令" class="headerlink" title="输入命令"></a>输入命令</h1><p>打开 sql shell;</p>
+<blockquote>
+<p>⚠️ SQL 语句一定要用 “;” 结尾</p>
+<p>⚠️ 如果没有用 “;” 结尾当终端 箭头是 “-&gt;” 这样的时候说明当前操作还没结束, 输入 “;” 或者 ctrl+c 来结束.</p>
+</blockquote>
+<h1 id="创建数据库"><a href="#创建数据库" class="headerlink" title="创建数据库"></a>创建数据库</h1><p><code>CREATE DATABASE dbname;</code></p>
+<h1 id="显示全部数据库"><a href="#显示全部数据库" class="headerlink" title="显示全部数据库"></a>显示全部数据库</h1><p><code>\l</code></p>
+<h1 id="选择数据库"><a href="#选择数据库" class="headerlink" title="选择数据库"></a>选择数据库</h1><p><code>c 数据库名字</code></p>
+<h1 id="基本-SQL-语句"><a href="#基本-SQL-语句" class="headerlink" title="基本 SQL 语句"></a>基本 SQL 语句</h1><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"># 创建新表 </span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> user_tbl(<span class="keyword">name</span> <span class="built_in">VARCHAR</span>(<span class="number">20</span>), signup_date <span class="built_in">DATE</span>);</span><br><span class="line"># 插入数据 </span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> user_tbl(<span class="keyword">name</span>, signup_date) <span class="keyword">VALUES</span>(<span class="string">'张三'</span>, <span class="string">'2013-12-22'</span>);</span><br><span class="line"># 选择记录 </span><br><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> user_tbl;</span><br><span class="line"># 更新数据 </span><br><span class="line"><span class="keyword">UPDATE</span> user_tbl <span class="keyword">set</span> <span class="keyword">name</span> = <span class="string">'李四'</span> <span class="keyword">WHERE</span> <span class="keyword">name</span> = <span class="string">'张三'</span>;</span><br><span class="line"># 删除记录 </span><br><span class="line"><span class="keyword">DELETE</span> <span class="keyword">FROM</span> user_tbl <span class="keyword">WHERE</span> <span class="keyword">name</span> = <span class="string">'李四'</span> ;</span><br><span class="line"># 添加栏位 </span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> user_tbl <span class="keyword">ADD</span> email <span class="built_in">VARCHAR</span>(<span class="number">40</span>);</span><br><span class="line"># 更新结构 </span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> user_tbl <span class="keyword">ALTER</span> <span class="keyword">COLUMN</span> signup_date <span class="keyword">SET</span> <span class="keyword">NOT</span> <span class="literal">NULL</span>;</span><br><span class="line"># 更名栏位 </span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> user_tbl <span class="keyword">RENAME</span> <span class="keyword">COLUMN</span> signup_date <span class="keyword">TO</span> signup;</span><br><span class="line"># 删除栏位 </span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> user_tbl <span class="keyword">DROP</span> <span class="keyword">COLUMN</span> email;</span><br><span class="line"># 表格更名 </span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> user_tbl <span class="keyword">RENAME</span> <span class="keyword">TO</span> backup_tbl;</span><br><span class="line"># 删除表格 </span><br><span class="line"><span class="keyword">DROP</span> <span class="keyword">TABLE</span> <span class="keyword">IF</span> <span class="keyword">EXISTS</span> backup_tbl;</span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 插入数据的时返回数据</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> user_tbl(<span class="keyword">name</span>, signup_date) <span class="keyword">VALUES</span>(<span class="string">'张三'</span>, <span class="string">'2013-12-22'</span>) <span class="keyword">RETURNING</span> *;</span><br></pre></td></tr></table></figure>
+<h2 id="创建新的表单"><a href="#创建新的表单" class="headerlink" title="创建新的表单"></a>创建新的表单</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE colors(</span><br><span class="line">	color_id bigserial PRIMARY KEY NOT NULL,</span><br><span class="line">	hexa bigint NOT NULL, </span><br><span class="line">	description test,</span><br><span class="line">	created_timestamp timestamp DEFAULT CURRENT_TIMESTAMP, </span><br><span class="line">	modified_timestamp timestamp DEFAULT CURRENT_TIMESTAMP</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<h1 id="最好的数据类型使用"><a href="#最好的数据类型使用" class="headerlink" title="最好的数据类型使用"></a>最好的数据类型使用</h1><h2 id="全部数据类型"><a href="#全部数据类型" class="headerlink" title="全部数据类型"></a>全部数据类型</h2><p><a href="http://www.jianshu.com/p/5e42b908af59" target="_blank" rel="noopener">参考</a>;</p>
+<h2 id="varchar-或者-text"><a href="#varchar-或者-text" class="headerlink" title="varchar 或者 text"></a>varchar 或者 text</h2><p>使用text <a href="http://stackoverflow.com/questions/4848964/postgresql-difference-between-text-and-varchar-character-varying" target="_blank" rel="noopener">参考</a>;</p>
+<h1 id="自动增加-Primay-key"><a href="#自动增加-Primay-key" class="headerlink" title="自动增加 Primay key"></a>自动增加 Primay key</h1><p>请用 bigserial, serial 或者 smailserial 在创建列的时候</p>
+<h1 id="自动更新时间"><a href="#自动更新时间" class="headerlink" title="自动更新时间"></a>自动更新时间</h1><p><a href="http://dba.stackexchange.com/questions/101054/postgres-automatic-insert-time-stamp-with-time-zone-india" target="_blank" rel="noopener">参考</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE product (</span><br><span class="line">id INT NOT NULL,</span><br><span class="line">modified_timestamp TIMESTAMP DEFAULT &apos;now&apos;::timestamp</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line">#provided the field is named the same thing in all tables that use this, you can use a centralized function</span><br><span class="line">CREATE FUNCTION update_modified_timestamp_column() RETURNS trigger</span><br><span class="line">    LANGUAGE plpgsql</span><br><span class="line">    AS $$</span><br><span class="line">  BEGIN</span><br><span class="line">    NEW.modified_timestamp = NOW();</span><br><span class="line">    RETURN NEW;</span><br><span class="line">  END;</span><br><span class="line">$$;</span><br><span class="line"></span><br><span class="line">CREATE TRIGGER product_update_modified_timestamp </span><br><span class="line">BEFORE UPDATE ON product </span><br><span class="line">FOR EACH ROW EXECUTE PROCEDURE update_modified_timestamp_column();</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://tmirun.github.io/PostgreSQL-笔记/" data-id="cjnzbd2tt001hh81e7n7abdje" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/untaged/">untaged</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/blog/Rxjs-笔记/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Rxjs 笔记
+        
+      </div>
+    </a>
+  
+  
+    <a href="/blog/mongoDB-笔记/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">MongoDB 笔记</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Electron/">Electron</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Hexo/">Hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Javascript/">Javascript</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/MongoDb/">MongoDb</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Node/">Node</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Testing/">Testing</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Typescript/">Typescript</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/programing/">programing</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/release/">release</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/uncategorized/">uncategorized</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/web/">web</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/电脑/">电脑</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Angular/">Angular</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Blog/">Blog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Color-picker/">Color picker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Electron/">Electron</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Electron-菜单/">Electron 菜单</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Electron-默认菜单/">Electron 默认菜单</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/EventListener/">EventListener</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Javascript/">Javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Mac/">Mac</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Mongodb/">Mongodb</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Node/">Node</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Nodejs/">Nodejs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/OS/">OS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Phantomjs/">Phantomjs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Promise/">Promise</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Testing/">Testing</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/gulp/">gulp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/node/">node</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/programing/">programing</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/release-notes/">release notes</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/scrum/">scrum</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/typescript/">typescript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/untaged/">untaged</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/web/">web</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/框架-web/">框架 web</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/版本发布通知/">版本发布通知</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/blog/tags/Angular/" style="font-size: 10px;">Angular</a> <a href="/blog/tags/Blog/" style="font-size: 10px;">Blog</a> <a href="/blog/tags/Color-picker/" style="font-size: 10px;">Color picker</a> <a href="/blog/tags/Electron/" style="font-size: 13.33px;">Electron</a> <a href="/blog/tags/Electron-菜单/" style="font-size: 10px;">Electron 菜单</a> <a href="/blog/tags/Electron-默认菜单/" style="font-size: 10px;">Electron 默认菜单</a> <a href="/blog/tags/EventListener/" style="font-size: 10px;">EventListener</a> <a href="/blog/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/blog/tags/Javascript/" style="font-size: 16.67px;">Javascript</a> <a href="/blog/tags/Mac/" style="font-size: 10px;">Mac</a> <a href="/blog/tags/Mongodb/" style="font-size: 10px;">Mongodb</a> <a href="/blog/tags/Node/" style="font-size: 13.33px;">Node</a> <a href="/blog/tags/Nodejs/" style="font-size: 10px;">Nodejs</a> <a href="/blog/tags/OS/" style="font-size: 10px;">OS</a> <a href="/blog/tags/Phantomjs/" style="font-size: 10px;">Phantomjs</a> <a href="/blog/tags/Promise/" style="font-size: 10px;">Promise</a> <a href="/blog/tags/Testing/" style="font-size: 10px;">Testing</a> <a href="/blog/tags/gulp/" style="font-size: 10px;">gulp</a> <a href="/blog/tags/node/" style="font-size: 10px;">node</a> <a href="/blog/tags/programing/" style="font-size: 10px;">programing</a> <a href="/blog/tags/release-notes/" style="font-size: 10px;">release notes</a> <a href="/blog/tags/scrum/" style="font-size: 10px;">scrum</a> <a href="/blog/tags/typescript/" style="font-size: 10px;">typescript</a> <a href="/blog/tags/untaged/" style="font-size: 20px;">untaged</a> <a href="/blog/tags/web/" style="font-size: 10px;">web</a> <a href="/blog/tags/框架-web/" style="font-size: 10px;">框架 web</a> <a href="/blog/tags/版本发布通知/" style="font-size: 10px;">版本发布通知</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/11/">November 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/10/">October 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/09/">September 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/10/">October 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/09/">September 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/11/">November 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/10/">October 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/09/">September 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/01/">January 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/blog/我是小白，我要学编程！/">我是小白，我要学编程！</a>
+          </li>
+        
+          <li>
+            <a href="/blog/Electron-默认菜单/">Electron 默认菜单</a>
+          </li>
+        
+          <li>
+            <a href="/blog/Release-Notes-版本发布通知/">Release Notes 版本发布通知</a>
+          </li>
+        
+          <li>
+            <a href="/blog/Hexo-Note-开发流程/">Hexo Note 开发流程</a>
+          </li>
+        
+          <li>
+            <a href="/blog/Electron-开始一个项目/">Electron 开始一个项目</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 Tmirun<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/blog/" class="mobile-nav-link">Home</a>
+  
+    <a href="/blog/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/blog/fancybox/jquery.fancybox.css">
+  <script src="/blog/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/blog/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

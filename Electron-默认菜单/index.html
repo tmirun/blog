@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Electron 默认菜单 | Tmirun blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="最近看到一些人问 “为什么我的 electron 程序打包之后没有复制粘贴功能” 或者 “打包后的程序没有菜单” 这是因为 Electron 在开发的时候如果没有菜单会启用它自带的默认菜单, 但在打包之后这个菜单是要手动加入的 那些细心的同学一定看到在 Electron 的 菜单文档 为我们提供了一个完整的默认菜单">
+<meta name="keywords" content="Electron,Javascript,Electron 默认菜单,Electron 菜单">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Electron 默认菜单">
+<meta property="og:url" content="https://tmirun.github.io/Electron-默认菜单/index.html">
+<meta property="og:site_name" content="Tmirun blog">
+<meta property="og:description" content="最近看到一些人问 “为什么我的 electron 程序打包之后没有复制粘贴功能” 或者 “打包后的程序没有菜单” 这是因为 Electron 在开发的时候如果没有菜单会启用它自带的默认菜单, 但在打包之后这个菜单是要手动加入的 那些细心的同学一定看到在 Electron 的 菜单文档 为我们提供了一个完整的默认菜单">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-10-17T21:51:27.799Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Electron 默认菜单">
+<meta name="twitter:description" content="最近看到一些人问 “为什么我的 electron 程序打包之后没有复制粘贴功能” 或者 “打包后的程序没有菜单” 这是因为 Electron 在开发的时候如果没有菜单会启用它自带的默认菜单, 但在打包之后这个菜单是要手动加入的 那些细心的同学一定看到在 Electron 的 菜单文档 为我们提供了一个完整的默认菜单">
+  
+    <link rel="alternate" href="/blog/atom.xml" title="Tmirun blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/blog/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/blog/" id="logo">Tmirun blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/blog/">Home</a>
+        
+          <a class="main-nav-link" href="/blog/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://tmirun.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Electron-默认菜单" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/Electron-默认菜单/" class="article-date">
+  <time datetime="2018-10-01T09:34:24.000Z" itemprop="datePublished">2018-10-01</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/Electron/">Electron</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Electron 默认菜单
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>最近看到一些人问 <strong>“为什么我的 electron 程序打包之后没有复制粘贴功能”</strong> 或者 <strong>“打包后的程序没有菜单”</strong></p>
+<p>这是因为 Electron 在开发的时候如果没有菜单会启用它自带的默认菜单, 但在打包之后这个菜单是要<strong>手动加入</strong>的</p>
+<p>那些细心的同学一定看到在 Electron 的 <a href="https://electronjs.org/docs/api/menu" target="_blank" rel="noopener">菜单文档</a> 为我们提供了一个完整的默认菜单</p>
+<a id="more"></a>
+<p>只要把下面的代码加入到你的 Electron 里就可以生成一个简单完整的菜单: </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123;app, Menu&#125; = <span class="built_in">require</span>(<span class="string">'electron'</span>)</span><br><span class="line"><span class="keyword">const</span> template = [</span><br><span class="line">  &#123;</span><br><span class="line">    label: <span class="string">'Edit'</span>,</span><br><span class="line">    submenu: [</span><br><span class="line">      &#123;<span class="attr">role</span>: <span class="string">'undo'</span>&#125;,</span><br><span class="line">      &#123;<span class="attr">role</span>: <span class="string">'redo'</span>&#125;,</span><br><span class="line">      &#123;<span class="attr">type</span>: <span class="string">'separator'</span>&#125;,</span><br><span class="line">      &#123;<span class="attr">role</span>: <span class="string">'cut'</span>&#125;,</span><br><span class="line">      &#123;<span class="attr">role</span>: <span class="string">'copy'</span>&#125;,</span><br><span class="line">      &#123;<span class="attr">role</span>: <span class="string">'paste'</span>&#125;,</span><br><span class="line">      &#123;<span class="attr">role</span>: <span class="string">'pasteandmatchstyle'</span>&#125;,</span><br><span class="line">      &#123;<span class="attr">role</span>: <span class="string">'delete'</span>&#125;,</span><br><span class="line">      &#123;<span class="attr">role</span>: <span class="string">'selectall'</span>&#125;</span><br><span class="line">    ]</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    label: <span class="string">'View'</span>,</span><br><span class="line">    submenu: [</span><br><span class="line">      &#123;<span class="attr">role</span>: <span class="string">'reload'</span>&#125;,</span><br><span class="line">      &#123;<span class="attr">role</span>: <span class="string">'forcereload'</span>&#125;,</span><br><span class="line">      &#123;<span class="attr">role</span>: <span class="string">'toggledevtools'</span>&#125;, <span class="comment">// !! 这里加入打开调试工具, 如果你不希望打开请去掉这行</span></span><br><span class="line">      &#123;<span class="attr">type</span>: <span class="string">'separator'</span>&#125;,</span><br><span class="line">      &#123;<span class="attr">role</span>: <span class="string">'resetzoom'</span>&#125;,</span><br><span class="line">      &#123;<span class="attr">role</span>: <span class="string">'zoomin'</span>&#125;,</span><br><span class="line">      &#123;<span class="attr">role</span>: <span class="string">'zoomout'</span>&#125;,</span><br><span class="line">      &#123;<span class="attr">type</span>: <span class="string">'separator'</span>&#125;,</span><br><span class="line">      &#123;<span class="attr">role</span>: <span class="string">'togglefullscreen'</span>&#125;</span><br><span class="line">    ]</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    role: <span class="string">'window'</span>,</span><br><span class="line">    submenu: [</span><br><span class="line">      &#123;<span class="attr">role</span>: <span class="string">'minimize'</span>&#125;,</span><br><span class="line">      &#123;<span class="attr">role</span>: <span class="string">'close'</span>&#125;</span><br><span class="line">    ]</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    role: <span class="string">'help'</span>,</span><br><span class="line">    submenu: [</span><br><span class="line">      &#123;</span><br><span class="line">        label: <span class="string">'Learn More'</span>,</span><br><span class="line">        click () &#123; <span class="built_in">require</span>(<span class="string">'electron'</span>).shell.openExternal(<span class="string">'https://electronjs.org'</span>) &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    ]</span><br><span class="line">  &#125;</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (process.platform === <span class="string">'darwin'</span>) &#123;</span><br><span class="line">  template.unshift(&#123;</span><br><span class="line">    label: app.getName(),</span><br><span class="line">    submenu: [</span><br><span class="line">      &#123;<span class="attr">role</span>: <span class="string">'about'</span>&#125;,</span><br><span class="line">      &#123;<span class="attr">type</span>: <span class="string">'separator'</span>&#125;,</span><br><span class="line">      &#123;<span class="attr">role</span>: <span class="string">'services'</span>, <span class="attr">submenu</span>: []&#125;,</span><br><span class="line">      &#123;<span class="attr">type</span>: <span class="string">'separator'</span>&#125;,</span><br><span class="line">      &#123;<span class="attr">role</span>: <span class="string">'hide'</span>&#125;,</span><br><span class="line">      &#123;<span class="attr">role</span>: <span class="string">'hideothers'</span>&#125;,</span><br><span class="line">      &#123;<span class="attr">role</span>: <span class="string">'unhide'</span>&#125;,</span><br><span class="line">      &#123;<span class="attr">type</span>: <span class="string">'separator'</span>&#125;,</span><br><span class="line">      &#123;<span class="attr">role</span>: <span class="string">'quit'</span>&#125;</span><br><span class="line">    ]</span><br><span class="line">  &#125;)</span><br><span class="line"></span><br><span class="line">  <span class="comment">// Edit menu</span></span><br><span class="line">  template[<span class="number">1</span>].submenu.push(</span><br><span class="line">    &#123;<span class="attr">type</span>: <span class="string">'separator'</span>&#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      label: <span class="string">'Speech'</span>,</span><br><span class="line">      submenu: [</span><br><span class="line">        &#123;<span class="attr">role</span>: <span class="string">'startspeaking'</span>&#125;,</span><br><span class="line">        &#123;<span class="attr">role</span>: <span class="string">'stopspeaking'</span>&#125;</span><br><span class="line">      ]</span><br><span class="line">    &#125;</span><br><span class="line">  )</span><br><span class="line"></span><br><span class="line">  <span class="comment">// Window menu</span></span><br><span class="line">  template[<span class="number">3</span>].submenu = [</span><br><span class="line">    &#123;<span class="attr">role</span>: <span class="string">'close'</span>&#125;,</span><br><span class="line">    &#123;<span class="attr">role</span>: <span class="string">'minimize'</span>&#125;,</span><br><span class="line">    &#123;<span class="attr">role</span>: <span class="string">'zoom'</span>&#125;,</span><br><span class="line">    &#123;<span class="attr">type</span>: <span class="string">'separator'</span>&#125;,</span><br><span class="line">    &#123;<span class="attr">role</span>: <span class="string">'front'</span>&#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> menu = Menu.buildFromTemplate(template)</span><br><span class="line">Menu.setApplicationMenu(menu)</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://tmirun.github.io/Electron-默认菜单/" data-id="cjnzbd2td000oh81e1vkcrtk0" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Electron/">Electron</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Electron-菜单/">Electron 菜单</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Electron-默认菜单/">Electron 默认菜单</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Javascript/">Javascript</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/blog/我是小白，我要学编程！/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          我是小白，我要学编程！
+        
+      </div>
+    </a>
+  
+  
+    <a href="/blog/Release-Notes-版本发布通知/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Release Notes 版本发布通知</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Electron/">Electron</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Hexo/">Hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Javascript/">Javascript</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/MongoDb/">MongoDb</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Node/">Node</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Testing/">Testing</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Typescript/">Typescript</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/programing/">programing</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/release/">release</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/uncategorized/">uncategorized</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/web/">web</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/电脑/">电脑</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Angular/">Angular</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Blog/">Blog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Color-picker/">Color picker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Electron/">Electron</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Electron-菜单/">Electron 菜单</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Electron-默认菜单/">Electron 默认菜单</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/EventListener/">EventListener</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Javascript/">Javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Mac/">Mac</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Mongodb/">Mongodb</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Node/">Node</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Nodejs/">Nodejs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/OS/">OS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Phantomjs/">Phantomjs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Promise/">Promise</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Testing/">Testing</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/gulp/">gulp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/node/">node</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/programing/">programing</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/release-notes/">release notes</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/scrum/">scrum</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/typescript/">typescript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/untaged/">untaged</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/web/">web</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/框架-web/">框架 web</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/版本发布通知/">版本发布通知</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/blog/tags/Angular/" style="font-size: 10px;">Angular</a> <a href="/blog/tags/Blog/" style="font-size: 10px;">Blog</a> <a href="/blog/tags/Color-picker/" style="font-size: 10px;">Color picker</a> <a href="/blog/tags/Electron/" style="font-size: 13.33px;">Electron</a> <a href="/blog/tags/Electron-菜单/" style="font-size: 10px;">Electron 菜单</a> <a href="/blog/tags/Electron-默认菜单/" style="font-size: 10px;">Electron 默认菜单</a> <a href="/blog/tags/EventListener/" style="font-size: 10px;">EventListener</a> <a href="/blog/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/blog/tags/Javascript/" style="font-size: 16.67px;">Javascript</a> <a href="/blog/tags/Mac/" style="font-size: 10px;">Mac</a> <a href="/blog/tags/Mongodb/" style="font-size: 10px;">Mongodb</a> <a href="/blog/tags/Node/" style="font-size: 13.33px;">Node</a> <a href="/blog/tags/Nodejs/" style="font-size: 10px;">Nodejs</a> <a href="/blog/tags/OS/" style="font-size: 10px;">OS</a> <a href="/blog/tags/Phantomjs/" style="font-size: 10px;">Phantomjs</a> <a href="/blog/tags/Promise/" style="font-size: 10px;">Promise</a> <a href="/blog/tags/Testing/" style="font-size: 10px;">Testing</a> <a href="/blog/tags/gulp/" style="font-size: 10px;">gulp</a> <a href="/blog/tags/node/" style="font-size: 10px;">node</a> <a href="/blog/tags/programing/" style="font-size: 10px;">programing</a> <a href="/blog/tags/release-notes/" style="font-size: 10px;">release notes</a> <a href="/blog/tags/scrum/" style="font-size: 10px;">scrum</a> <a href="/blog/tags/typescript/" style="font-size: 10px;">typescript</a> <a href="/blog/tags/untaged/" style="font-size: 20px;">untaged</a> <a href="/blog/tags/web/" style="font-size: 10px;">web</a> <a href="/blog/tags/框架-web/" style="font-size: 10px;">框架 web</a> <a href="/blog/tags/版本发布通知/" style="font-size: 10px;">版本发布通知</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/11/">November 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/10/">October 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/09/">September 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/10/">October 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/09/">September 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/11/">November 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/10/">October 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/09/">September 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/01/">January 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/blog/我是小白，我要学编程！/">我是小白，我要学编程！</a>
+          </li>
+        
+          <li>
+            <a href="/blog/Electron-默认菜单/">Electron 默认菜单</a>
+          </li>
+        
+          <li>
+            <a href="/blog/Release-Notes-版本发布通知/">Release Notes 版本发布通知</a>
+          </li>
+        
+          <li>
+            <a href="/blog/Hexo-Note-开发流程/">Hexo Note 开发流程</a>
+          </li>
+        
+          <li>
+            <a href="/blog/Electron-开始一个项目/">Electron 开始一个项目</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 Tmirun<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/blog/" class="mobile-nav-link">Home</a>
+  
+    <a href="/blog/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/blog/fancybox/jquery.fancybox.css">
+  <script src="/blog/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/blog/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
