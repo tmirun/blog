@@ -288,6 +288,258 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://tmirun.github.io/blog/mongoDB-笔记/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Tmirun">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tmirun blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/blog/mongoDB-笔记/" itemprop="url">
+                  MongoDB 笔记
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2017-02-11 21:20:49" itemprop="dateCreated datePublished" datetime="2017-02-11T21:20:49+01:00">2017-02-11</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-10-17 23:51:27" itemprop="dateModified" datetime="2018-10-17T23:51:27+02:00">2018-10-17</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/blog/categories/MongoDb/" itemprop="url" rel="index"><span itemprop="name">MongoDb</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <a id="more"></a>
+<p><a href="http://www.runoob.com/mongodb/mongodb-tutorial.html" target="_blank" rel="noopener">参考 runoob</a></p>
+<p><a href="https://www.tutorialspoint.com/mongodb/index.htm" target="_blank" rel="noopener">参考英语版</a></p>
+<h1 id="安装-MongoDB"><a href="#安装-MongoDB" class="headerlink" title="安装 MongoDB"></a>安装 MongoDB</h1><p><a href="https://docs.mongodb.com/manual/administration/install-community/" target="_blank" rel="noopener">安装指南</a></p>
+<h1 id="开启-Mongod"><a href="#开启-Mongod" class="headerlink" title="开启 Mongod"></a>开启 Mongod</h1><p>mongo 服务器</p>
+<p><code>sudo mongod</code></p>
+<h1 id="开启-Mongo-shell"><a href="#开启-Mongo-shell" class="headerlink" title="开启 Mongo shell"></a>开启 Mongo shell</h1><p><code>mongo</code></p>
+<hr>
+<h1 id="数据库操作"><a href="#数据库操作" class="headerlink" title="数据库操作"></a>数据库操作</h1><h2 id="显示数据库"><a href="#显示数据库" class="headerlink" title="显示数据库"></a>显示数据库</h2><p><code>show dbs</code></p>
+<h2 id="创建-选择数据库"><a href="#创建-选择数据库" class="headerlink" title="创建/选择数据库"></a>创建/选择数据库</h2><p><code>use DATABASE_NAME</code></p>
+<h2 id="删除数据库"><a href="#删除数据库" class="headerlink" title="删除数据库"></a>删除数据库</h2><p>第一切换到你想要删除的数据库</p>
+<p><code>use DATABASE_NAME</code></p>
+<p>删除数据库</p>
+<p><code>db.dropDatabase()</code></p>
+<hr>
+<h1 id="collection-合集-操作"><a href="#collection-合集-操作" class="headerlink" title="collection(合集) 操作"></a>collection(合集) 操作</h1><h2 id="显示-collection"><a href="#显示-collection" class="headerlink" title="显示 collection"></a>显示 collection</h2><p><code>show collections</code></p>
+<h2 id="创建-collection"><a href="#创建-collection" class="headerlink" title="创建 collection"></a>创建 collection</h2><p>在 MongoDB 里面不需要创建合集</p>
+<p><code>db.createCollection(NAME, OPTIONS)</code></p>
+<p>Option 限制这个 collection 的大小, index 等… <a href="https://www.tutorialspoint.com/mongodb/mongodb_create_collection.htm" target="_blank" rel="noopener">Options 参考</a>.</p>
+<h2 id="删除-collection"><a href="#删除-collection" class="headerlink" title="删除 collection"></a>删除 collection</h2><p><code>db.COLLECTION_NAME.drop()</code></p>
+<h2 id="插入文档"><a href="#插入文档" class="headerlink" title="插入文档"></a>插入文档</h2><p><code>db.COLLECTION_NAME.insert(JSON)</code></p>
+<h2 id="查询"><a href="#查询" class="headerlink" title="查询"></a>查询</h2><p><code>db.COLLECTION_NAME.find()</code></p>
+<table>
+<thead>
+<tr>
+<th>操作</th>
+<th>格式</th>
+<th>范例</th>
+<th>RDBMS中的类似语句</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>等于</td>
+<td>{<key>:<value>}</value></key></td>
+<td>db.col.find({“by”:”菜鸟教程”}).pretty()</td>
+<td>where by = ‘菜鸟教程’</td>
+</tr>
+<tr>
+<td>小于</td>
+<td>{<key>:{$lt:<value>}}</value></key></td>
+<td>db.col.find({“likes”:{$lt:50}}).pretty()</td>
+<td>where likes &lt; 50</td>
+</tr>
+<tr>
+<td>小于或等于</td>
+<td>{<key>:{$lte:<value>}}</value></key></td>
+<td>db.col.find({“likes”:{$lte:50}}).pretty()</td>
+<td>where likes &lt;= 50</td>
+</tr>
+<tr>
+<td>大于</td>
+<td>{<key>:{$gt:<value>}}</value></key></td>
+<td>db.col.find({“likes”:{$gt:50}}).pretty()</td>
+<td>where likes &gt; 50</td>
+</tr>
+<tr>
+<td>大于或等于</td>
+<td>{<key>:{$gte:<value>}}</value></key></td>
+<td>db.col.find({“likes”:{$gte:50}}).pretty()</td>
+<td>where likes &gt;= 50</td>
+</tr>
+<tr>
+<td>不等于</td>
+<td>{<key>:{$ne:<value>}}</value></key></td>
+<td>db.col.find({“likes”:{$ne:50}}).pretty()</td>
+<td>where likes != 50</td>
+</tr>
+</tbody>
+</table>
+<h3 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h3><p><a href="http://www.runoob.com/mongodb/mongodb-update.html" target="_blank" rel="noopener">更多参考</a></p>
+<p><code>db.COLLECTION_NAME.update(SELECTION_CRITERIA, UPDATED_DATA)</code></p>
+<p>例子:</p>
+<p><code>db.COLLECTION_NAME.update({&#39;title&#39;:&#39;MongoDB 教程&#39;},{$set:{&#39;title&#39;:&#39;MongoDB&#39;}})</code></p>
+<h3 id="删除文档"><a href="#删除文档" class="headerlink" title="删除文档"></a>删除文档</h3><p>语法:</p>
+<p><code>db.COLLECTION_NAME.remove(DELLETION_CRITTERIA)</code></p>
+<p>例子:</p>
+<p><code>db.mycol.remove({&#39;title&#39;:&#39;MongoDB Overview&#39;})</code></p>
+<p>删除一个:</p>
+<p><code>db.COLLECTION_NAME.remove(DELETION_CRITERIA,1)</code></p>
+<p>删除全部:</p>
+<p><code>db.mycol.remove()</code>;</p>
+<h3 id="pretty"><a href="#pretty" class="headerlink" title="pretty"></a>pretty</h3><p>让输出好看点, <a href="https://docs.mongodb.com/manual/reference/method/cursor.pretty/" target="_blank" rel="noopener">点击这里来查看效果</a></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://tmirun.github.io/blog/Javascript-Decorator-装饰/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1891,187 +2143,11 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://tmirun.github.io/blog/RGB-彩虹函数/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Tmirun">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/blog/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tmirun blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/blog/RGB-彩虹函数/" itemprop="url">
-                  RGB 彩虹函数
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2016-01-09 14:59:11" itemprop="dateCreated datePublished" datetime="2016-01-09T14:59:11+01:00">2016-01-09</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2018-10-17 23:51:27" itemprop="dateModified" datetime="2018-10-17T23:51:27+02:00">2018-10-17</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/blog/categories/Javascript/" itemprop="url" rel="index"><span itemprop="name">Javascript</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>这个函数用于彩虹RGB生成 [0-255, 0-255, 0-255]</p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/blog/RGB-彩虹函数/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-         
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/blog/page/2/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/blog/">1</a><a class="page-number" href="/blog/page/2/">2</a><span class="page-number current">3</span>
+    <a class="extend prev" rel="prev" href="/blog/page/2/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/blog/">1</a><a class="page-number" href="/blog/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/blog/page/4/">4</a><a class="extend next" rel="next" href="/blog/page/4/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 
@@ -2114,7 +2190,7 @@
                 
                   <a href="/blog/archives/">
                 
-                    <span class="site-state-item-count">30</span>
+                    <span class="site-state-item-count">31</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -2155,7 +2231,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">12</span>
+                      
+                    
+                    <span class="site-state-item-count">13</span>
                     <span class="site-state-item-name">categories</span>
                   </a>
                 </div>
@@ -2230,7 +2308,19 @@
                     
                       
                     
-                    <span class="site-state-item-count">27</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">30</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
