@@ -116,7 +116,7 @@
 <meta property="og:site_name" content="Tmirun blog">
 <meta property="og:description" content="这里是一个简单的 RESTful api 的例子.  参考:   阮一峰的网络日志: RESTful API 设计指南   阮一峰的网络日志: 理解RESTful架构">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-17T21:51:27.815Z">
+<meta property="og:updated_time" content="2018-12-03T10:26:50.039Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="REST FULL 笔记">
 <meta name="twitter:description" content="这里是一个简单的 RESTful api 的例子.  参考:   阮一峰的网络日志: RESTful API 设计指南   阮一峰的网络日志: 理解RESTful架构">
@@ -351,7 +351,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-10-17 23:51:27" itemprop="dateModified" datetime="2018-10-17T23:51:27+02:00">2018-10-17</time>
+                <time title="Modified: 2018-12-03 11:26:50" itemprop="dateModified" datetime="2018-12-03T11:26:50+01:00">2018-12-03</time>
               
             
           </span>
@@ -418,7 +418,8 @@
 <p>或者</p>
 <p><code>https://example.com/api</code></p>
 <h2 id="Api-版本"><a href="#Api-版本" class="headerlink" title="Api 版本"></a>Api 版本</h2><p><code>https://api.example.com/v1/</code></p>
-<h1 id="路径-endpoint"><a href="#路径-endpoint" class="headerlink" title="路径 (endpoint)"></a>路径 (endpoint)</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">获取,更改,删除多个资源</span><br><span class="line">https://api.example.com/v1/supermarkets</span><br><span class="line">https://api.example.com/v1/products</span><br><span class="line">https://api.example.com/v1/employees</span><br><span class="line"></span><br><span class="line">获取,更改,删除某个资源</span><br><span class="line">https://api.example.com/v1/supermarkets/id</span><br><span class="line">https://api.example.com/v1/products/id</span><br><span class="line">https://api.example.com/v1/employees/id</span><br></pre></td></tr></table></figure>
+<h1 id="路径-endpoint"><a href="#路径-endpoint" class="headerlink" title="路径 (endpoint)"></a>路径 (endpoint)</h1><p>路径我们采用复数 (item =&gt; 单数，<strong>items =&gt; 复数</strong>)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">获取,更改,删除多个资源</span><br><span class="line">https://api.example.com/v1/supermarkets</span><br><span class="line">https://api.example.com/v1/products</span><br><span class="line">https://api.example.com/v1/employees</span><br><span class="line"></span><br><span class="line">获取,更改,删除某个资源</span><br><span class="line">https://api.example.com/v1/supermarkets/id</span><br><span class="line">https://api.example.com/v1/products/id</span><br><span class="line">https://api.example.com/v1/employees/id</span><br></pre></td></tr></table></figure>
 <h1 id="HTTP-方法"><a href="#HTTP-方法" class="headerlink" title="HTTP 方法"></a>HTTP 方法</h1><p>GET: 获取资源 返回资源<br>POST: 创建资源 返回资源<br>PUT: 更新资源 返回资源<br>DELETE: 删除资源 返回 http status 200 (处理成功的意思).</p>
 <h1 id="HTTP-状态"><a href="#HTTP-状态" class="headerlink" title="HTTP 状态"></a>HTTP 状态</h1><ul>
 <li><p>200 OK - [GET]：服务器成功返回用户请求的数据，该操作是幂等的（Idempotent）。</p>
@@ -561,7 +562,7 @@
                 
                   <a href="/blog/archives/">
                 
-                    <span class="site-state-item-count">32</span>
+                    <span class="site-state-item-count">33</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
