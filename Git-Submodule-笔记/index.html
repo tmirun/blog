@@ -108,18 +108,18 @@
 
 
 
-  <meta name="description" content="参考 添加12git submodule initgit submodule add [GIT REPO URL] [OPTIONAL PATH NAME] 更新如果我们的项目是这样的12parent_project|- child_project 每次我们更新 child_project 的时候 也需要在 parent_proejct 更新的child project 所在的 commit 删">
+  <meta name="description" content="参考 我们这有两个项目 main_project 和 child_project 添加123cd main_projectgit submodule initgit submodule add [GIT REPO URL] [OPTIONAL PATH NAME] 123456789$ git statusEn la rama masterTu rama está actualizada con">
 <meta name="keywords" content="Git">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git Submodule 笔记">
 <meta property="og:url" content="https://tmirun.github.io/Git-Submodule-笔记/index.html">
 <meta property="og:site_name" content="Tmirun blog">
-<meta property="og:description" content="参考 添加12git submodule initgit submodule add [GIT REPO URL] [OPTIONAL PATH NAME] 更新如果我们的项目是这样的12parent_project|- child_project 每次我们更新 child_project 的时候 也需要在 parent_proejct 更新的child project 所在的 commit 删">
+<meta property="og:description" content="参考 我们这有两个项目 main_project 和 child_project 添加123cd main_projectgit submodule initgit submodule add [GIT REPO URL] [OPTIONAL PATH NAME] 123456789$ git statusEn la rama masterTu rama está actualizada con">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-02T13:56:16.539Z">
+<meta property="og:updated_time" content="2019-03-28T21:14:23.724Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git Submodule 笔记">
-<meta name="twitter:description" content="参考 添加12git submodule initgit submodule add [GIT REPO URL] [OPTIONAL PATH NAME] 更新如果我们的项目是这样的12parent_project|- child_project 每次我们更新 child_project 的时候 也需要在 parent_proejct 更新的child project 所在的 commit 删">
+<meta name="twitter:description" content="参考 我们这有两个项目 main_project 和 child_project 添加123cd main_projectgit submodule initgit submodule add [GIT REPO URL] [OPTIONAL PATH NAME] 123456789$ git statusEn la rama masterTu rama está actualizada con">
 
 
 
@@ -351,7 +351,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-12-02 14:56:16" itemprop="dateModified" datetime="2018-12-02T14:56:16+01:00">2018-12-02</time>
+                <time title="Modified: 2019-03-28 22:14:23" itemprop="dateModified" datetime="2019-03-28T22:14:23+01:00">2019-03-28</time>
               
             
           </span>
@@ -404,9 +404,15 @@
       
         <a id="more"></a>
 <p><a href="https://www.yiibai.com/git/git_submodule.html" target="_blank" rel="noopener">参考</a></p>
-<h1 id="添加"><a href="#添加" class="headerlink" title="添加"></a>添加</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git submodule init</span><br><span class="line">git submodule add [GIT REPO URL] [OPTIONAL PATH NAME]</span><br></pre></td></tr></table></figure>
-<h1 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h1><p>如果我们的项目是这样的<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">parent_project</span><br><span class="line">|- child_project</span><br></pre></td></tr></table></figure></p>
-<p>每次我们更新 child_project 的时候 也需要在 parent_proejct 更新的child project 所在的 commit</p>
+<p>我们这有两个项目 main_project 和 child_project</p>
+<h1 id="添加"><a href="#添加" class="headerlink" title="添加"></a>添加</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd main_project</span><br><span class="line">git submodule init</span><br><span class="line">git submodule add [GIT REPO URL] [OPTIONAL PATH NAME]</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ git status</span><br><span class="line">En la rama master</span><br><span class="line">Tu rama está actualizada con &apos;origin/master&apos;.</span><br><span class="line"></span><br><span class="line">Cambios a ser confirmados:</span><br><span class="line">  (usa &quot;git reset HEAD &lt;archivo&gt;...&quot; para sacar del área de stage)</span><br><span class="line"></span><br><span class="line">	nuevo archivo:  .gitmodules</span><br><span class="line">	nuevo archivo:  child_project</span><br></pre></td></tr></table></figure>
+<p>在 .gitModule 内容<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[submodule &quot;child_project&quot;]</span><br><span class="line">  path = child_project</span><br><span class="line">  url = git@github.com:tmirun/child_project.git</span><br></pre></td></tr></table></figure></p>
+<h1 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h1><p>如果我们的项目是这样的<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">main_project</span><br><span class="line">|- child_project</span><br></pre></td></tr></table></figure></p>
+<p>每次我们更新 child_project 的时候 也需要在 main_proejct 更新的child project 所在的 commit</p>
+<h1 id="克隆含有子模块的项目"><a href="#克隆含有子模块的项目" class="headerlink" title="克隆含有子模块的项目"></a>克隆含有子模块的项目</h1><h2 id="方法-1"><a href="#方法-1" class="headerlink" title="方法 1"></a>方法 1</h2><p>在克隆父级模块的时候用 <strong>–recursive</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone http://github.com/chaconinc/MainProject --recursive</span><br></pre></td></tr></table></figure>
+<h2 id="方法-2"><a href="#方法-2" class="headerlink" title="方法 2"></a>方法 2</h2><p>第一克隆父级模块<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git clone http://github.com/chaconinc/MainProject main_project</span><br><span class="line">cd main_project</span><br><span class="line">git submodule init</span><br><span class="line">git submodule update</span><br></pre></td></tr></table></figure></p>
 <h1 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h1><p><a href="https://stackoverflow.com/questions/29850029/what-is-the-current-way-to-remove-a-git-submodule/29850245" target="_blank" rel="noopener">参考</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git submodule deinit &lt;asubmodule&gt;    </span><br><span class="line">git rm &lt;asubmodule&gt;</span><br><span class="line"># Note: asubmodule (no trailing slash)</span><br><span class="line"># or, if you want to leave it in your working tree</span><br><span class="line">git rm --cached &lt;asubmodule&gt;</span><br><span class="line">rm -rf .git/modules/&lt;asubmodule&gt;</span><br></pre></td></tr></table></figure></p>
 
       
@@ -523,7 +529,7 @@
                 
                   <a href="/blog/archives/">
                 
-                    <span class="site-state-item-count">37</span>
+                    <span class="site-state-item-count">39</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -570,7 +576,13 @@
                     
                       
                     
-                    <span class="site-state-item-count">15</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">17</span>
                     <span class="site-state-item-name">categories</span>
                   </a>
                 </div>
@@ -665,7 +677,13 @@
                     
                       
                     
-                    <span class="site-state-item-count">32</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">34</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
@@ -701,7 +719,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#添加"><span class="nav-number">1.</span> <span class="nav-text">添加</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#更新"><span class="nav-number">2.</span> <span class="nav-text">更新</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#删除"><span class="nav-number">3.</span> <span class="nav-text">删除</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#添加"><span class="nav-number">1.</span> <span class="nav-text">添加</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#更新"><span class="nav-number">2.</span> <span class="nav-text">更新</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#克隆含有子模块的项目"><span class="nav-number">3.</span> <span class="nav-text">克隆含有子模块的项目</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#方法-1"><span class="nav-number">3.1.</span> <span class="nav-text">方法 1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方法-2"><span class="nav-number">3.2.</span> <span class="nav-text">方法 2</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#删除"><span class="nav-number">4.</span> <span class="nav-text">删除</span></a></li></ol></div>
             
 
           </div>
